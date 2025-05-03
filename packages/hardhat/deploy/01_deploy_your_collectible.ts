@@ -34,6 +34,7 @@ const deployYourCollectible: DeployFunction = async function (hre: HardhatRuntim
 
   // Get the deployed contract to interact with it after deploying.
   const yourCollectible = await hre.ethers.getContract<Contract>("YourCollectible", deployer);
+  console.log("YourCollectible deployed at:", yourCollectible);
 };
 
 export default deployYourCollectible;
